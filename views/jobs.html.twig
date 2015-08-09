@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jobs</title>
+    </head>
+    <body>
+        <h1>Input a job you've held</h1>
+        {% if jobs is not empty %}
+            <p>Here are all of your past jobs</p>
+            <ul>
+                {% for job in jobs %}
+                    <h2>{{ job.getTitle }}</h2>
+                    <li>{{ job.getTime }}</li>
+                    <li>{{ job.getDuties }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action='/jobs' method='post'>
+            <label for='jobTitle'>Job Title</label>
+            <input id='jobTitle' name='jobTitle' type='text'>
+            <label for='jobTime'>Time you worked there</label>
+            <input id='jobTime' name='jobTime' type='text'>
+            <label for='jobDuties'>Job Duties</label>
+            <input id='jobDuties' name='jobDuties' type='text'>
+            <button type='submit'>Add job</button>
+        </form>
+        <form action='/delete_jobs' method='post'>
+            <button type='submit'>Clear</button>
+        </form>
+    </body>
+</html>

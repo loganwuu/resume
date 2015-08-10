@@ -1,6 +1,6 @@
 # Resume Building App
 
-##### App that displays a user's resume with jobs they have held. (8/7/2015)
+##### App that displays a user's resume with jobs they have held. (8/9/2015)
 
 #### By **Logan Wu**
 
